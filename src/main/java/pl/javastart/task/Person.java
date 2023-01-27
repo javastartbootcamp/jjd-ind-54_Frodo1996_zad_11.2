@@ -8,18 +8,9 @@ public class Person {
     private String pesel;
 
     public Person(String firstName, String lastName, int age, String socialSecurityNumber) {
-        if (firstName == null) {
-            throw new NameUndefinedException("Podane imię jest nieprawidłowe " + getFirstName());
-        }
-        if (lastName == null) {
-            throw new NameUndefinedException("Podane nazwisko jest nieprawidłowe " + getLastName());
-        }
-        if (age <= 1) {
-            throw new IncorrectAgeExceptions("Najmniejszy dopuszczalny wiek to 2 lata " + getAge());
-        }
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAge(age);
         this.pesel = socialSecurityNumber;
     }
 
